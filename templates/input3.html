@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/input.css') }}">
+        <meta charset="utf8"/>
+        <title>NEW released movies in 2021!</title>
+    </head>
+</html>
+
+<body>
+    <h1>Welcome to the NEW Movies Browser!</h1>
+    <h2>Search the movie by rating</h2>
+    <form action="/handle_form_rating" method="POST">
+        <p>
+            Do you care about the rating of the movies?
+            <select name="rating">
+                <option value=""></option>
+                <option value=3>Above 8</option>
+                <option value=2>7-8</option>
+                <option value=1>5-7</option>
+                <option value=0>Below 6</option>
+            </select><br/><br/>
+        </p>
+        <input type="submit" value="Submit Form"/>
+    </form>
+    <p><a href="/">Back to main page</a></p>
+</body>

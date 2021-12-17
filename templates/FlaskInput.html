@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/input.css') }}">
+        <meta charset="utf8"/>
+        <title>NEW released movies in 2021!</title>
+    </head>
+</html>
+
+<body>
+    <h1>Welcome to the NEW Movies Browser!</h1>
+    <h2>Do not know what to do to relax youself in your free time?</h2>
+    <h2>The system has collected the new movies released in 2021, come and find one you are interested in to enjoy!</h2>
+    <form action="/handle_form" method="POST">
+        <p><a href="/name">Search the movie by name</a></p>
+        <p><a href="/genre">Search the movie by genre</a></p>
+        <p><a href="/rating">Search the movie by rating</a></p>
+        <p><a href="/certificate">Search the movie by certificate</a></p>
+        <p><a href="/votes">Search the movie by votes</a></p>
+        <!-- <p>
+            Which genre of movie do you prefer?
+            <select name="genre">
+                <option value=""></option>
+                <option value="Comedy,">Comedy</option>
+                <option value="Romance">Romance</option>
+                <option value="Action,">Action</option>
+                <option value="Fantasy">Fantasy</option>
+            </select><br/><br/>
+        </p>
+        <p>
+            Do you care about the rating of the movies?
+            <select name="rating">
+                <option value=""></option>
+                <option value=3>Above 8</option>
+                <option value=2>7-8</option>
+                <option value=1>5-7</option>
+                <option value=0>Below 6</option>
+            </select><br/><br/>
+        </p>
+        <p>
+            Which certificate of movie do you prefer?
+            <select name="certificate">
+                <option value=""></option>
+                <option value=2>PG</option>
+                <option value=1>PG-13</option>
+                <option value=3>G</option>
+                <option value=0>R</option>
+            </select><br/><br/>
+        </p>
+        <p>
+            Would you like to see the movie list sorted by the votes?
+            <input type="radio" name="votes">Yes<br/>
+        </p>
+
+        <input type="submit" value="Submit Form"/> -->
+    </form>
+</body>

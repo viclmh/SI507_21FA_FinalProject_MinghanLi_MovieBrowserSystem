@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/input.css') }}">
+        <meta charset="utf8"/>
+        <title>NEW released movies in 2021!</title>
+    </head>
+</html>
+
+<body>
+    <h1>Welcome to the NEW Movies Browser!</h1>
+    <h2>Search the movie by certificate</h2>
+    <form action="/handle_form_certificate" method="POST">
+        <p>
+            Which certificate of movie do you prefer?
+            <select name="certificate">
+                <option value=""></option>
+                <option value=2>PG</option>
+                <option value=1>PG-13</option>
+                <option value=3>G</option>
+                <option value=0>R</option>
+            </select><br/><br/>
+        </p>
+        <input type="submit" value="Submit Form"/>
+    </form>
+    <p><a href="/">Back to main page</a></p>
+</body>

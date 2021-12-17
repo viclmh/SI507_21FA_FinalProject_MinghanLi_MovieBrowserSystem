@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/option2.css') }}">
+        <meta charset="utf8"/>
+        <title>Display the movie of the name you entered</title>
+    </head>
+</html>
+
+<body>
+    <h1>Thank you! Here is the {{genre}} movie you are looking for!</h1>
+    <table class="center"> 
+        <tr>
+          <th>Movie Name</th>
+          <th>Genre</th>
+          <th>Rating</th>
+          <th>Votes</th>
+          <th>Runtime</th>
+          <th>Certificate</th>
+          <th>Stars</th>
+          <th>Director</th>
+        </tr>
+        {% for genreDict in nodeList %}
+        <tr>
+          <td>{{genreDict['name']}}</td>
+          <td><b>{% for genre in genreDict['genre'] %}
+            {{genre}}
+            {% endfor %}</b></td>
+          <td>{{genreDict['rating']}}</td>
+          <td>{{genreDict['votes']}}</td>
+          <td>{{genreDict['runtime']}}</td>
+          <td>{{genreDict['certificate']}}</td>
+          <td>{% for star in genreDict['star'] %}
+            {{star}}
+            {% endfor %}</td>
+          <td>{% for director in genreDict['director'] %}
+            {{director}}
+            {% endfor %}</td>
+        </tr>
+        {% endfor %}
+      </table>
+
+
+
+</body>

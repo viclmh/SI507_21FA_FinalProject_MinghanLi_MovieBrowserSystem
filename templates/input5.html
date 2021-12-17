@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/input.css') }}">
+        <meta charset="utf8"/>
+        <title>NEW released movies in 2021!</title>
+    </head>
+</html>
+
+<body>
+    <h1>Welcome to the NEW Movies Browser!</h1>
+    <h2>Search the movie by votes</h2>
+    <form action="/handle_form_votes" method="POST">
+        <p>
+            Would you like to see the movie list sorted by the votes?
+            <input type="radio" name="votes">Yes<br/>
+        </p>
+        <input type="submit" value="Submit Form"/>
+    </form>
+    <p><a href="/">Back to main page</a></p>
+</body>
